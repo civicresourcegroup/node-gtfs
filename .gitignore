@@ -3,3 +3,4 @@ downloads
 /config.json
 .idea
 test/fixture/tmp/*.txt
+*.log
