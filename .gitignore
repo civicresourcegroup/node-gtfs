@@ -4,3 +4,4 @@ downloads
 .idea
 test/fixture/tmp/*.txt
 *.log
+.DS_Store
