@@ -19,7 +19,6 @@ const agenciesFixtures = [{
 config.agencies = agenciesFixtures;
 
 describe('gtfs.getStopsByDistance(): ', () => {
-
   before((done) => {
     database.connect(config, done);
   });
@@ -70,7 +69,7 @@ describe('gtfs.getStopsByDistance(): ', () => {
     const lat = 37.38976166855;
     const radius = 2;
     const expectedStops = {
-      'ctla': {
+      ctla: {
         stop_id: 'ctla',
         stop_code: '',
         stop_name: 'Lawrence Caltrain',
@@ -83,9 +82,9 @@ describe('gtfs.getStopsByDistance(): ', () => {
         platform_code: '',
         wheelchair_boarding: 1,
         agency_key: 'caltrain',
-        loc: [ -121.997258, 37.370815 ]
+        loc: [-121.997258, 37.370815]
       },
-      '70231': {
+      70231: {
         stop_id: '70231',
         stop_code: '70231',
         stop_name: 'Lawrence Caltrain',
@@ -98,9 +97,9 @@ describe('gtfs.getStopsByDistance(): ', () => {
         platform_code: 'NB',
         wheelchair_boarding: 1,
         agency_key: 'caltrain',
-        loc: [ -121.997114, 37.370598 ]
+        loc: [-121.997114, 37.370598]
       },
-      '70232': {
+      70232: {
         stop_id: '70232',
         stop_code: '70232',
         stop_name: 'Lawrence Caltrain',
@@ -113,7 +112,7 @@ describe('gtfs.getStopsByDistance(): ', () => {
         platform_code: 'SB',
         wheelchair_boarding: 1,
         agency_key: 'caltrain',
-        loc: [ -121.997135, 37.370484 ]
+        loc: [-121.997135, 37.370484]
       }
     };
 
@@ -147,7 +146,7 @@ describe('gtfs.getStopsByDistance(): ', () => {
     const lon = -121.915671;
     const lat = 37.340902;
     const expectedStops = {
-      'ctco': {
+      ctco: {
         stop_id: 'ctco',
         stop_code: '',
         stop_name: 'College Park Caltrain',
@@ -160,9 +159,9 @@ describe('gtfs.getStopsByDistance(): ', () => {
         platform_code: '',
         wheelchair_boarding: 2,
         agency_key: 'caltrain',
-        loc: [ -121.914998, 37.34217 ]
+        loc: [-121.914998, 37.34217]
       },
-      '70252': {
+      70252: {
         stop_id: '70252',
         stop_code: '70252',
         stop_name: 'College Park Caltrain',
@@ -175,9 +174,9 @@ describe('gtfs.getStopsByDistance(): ', () => {
         platform_code: 'SB',
         wheelchair_boarding: 2,
         agency_key: 'caltrain',
-        loc: [ -121.914677, 37.342338 ]
+        loc: [-121.914677, 37.342338]
       },
-      '70251': {
+      70251: {
         stop_id: '70251',
         stop_code: '70251',
         stop_name: 'College Park Caltrain',
@@ -190,7 +189,7 @@ describe('gtfs.getStopsByDistance(): ', () => {
         platform_code: 'NB',
         wheelchair_boarding: 2,
         agency_key: 'caltrain',
-        loc: [ -121.9146, 37.342384 ]
+        loc: [-121.9146, 37.342384]
       }
     };
 

@@ -21,8 +21,7 @@ const agenciesFixtures = [{
 
 config.agencies = agenciesFixtures;
 
-describe('gtfs.getAgency(): ', function(){
-
+describe('gtfs.getAgency(): ', () => {
   before((done) => {
     async.series({
       connectToDb: (next) => {

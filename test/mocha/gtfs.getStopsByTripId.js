@@ -48,12 +48,12 @@ describe('gtfs.getStopsByTripId(): ', () => {
   });
 
   it('should return stops by trip id specified', (done) => {
-    let tripId = '23a';
+    const tripId = '23a';
     let stop_ids = [];
     gtfs.getStopsByTripId(agenciesFixtures[0].agency_key, tripId, (err, res) => {
-      stop_ids = res.map((i) => i.stop_id).sort();
-      gtfs.getStoptimesByTrip(agenciesFixtures[0].agency_key, tripId, (er,resp) => {
-        let expected = resp.map((i) => i.stop_id).sort();
+      stop_ids = res.map(i => i.stop_id).sort();
+      gtfs.getStoptimesByTrip(agenciesFixtures[0].agency_key, tripId, (er, resp) => {
+        const expected = resp.map(i => i.stop_id).sort();
         stop_ids.should.be.eql(expected);
       });
     });

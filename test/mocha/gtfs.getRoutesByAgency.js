@@ -22,7 +22,6 @@ const agency_id = agenciesFixtures[0].agency_id;
 config.agencies = agenciesFixtures;
 
 describe('gtfs.getRoutesByAgency(): ', () => {
-
   before((done) => {
     database.connect(config, done);
   });

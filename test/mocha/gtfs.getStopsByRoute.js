@@ -19,12 +19,11 @@ const agenciesFixtures = [{
 config.agencies = agenciesFixtures;
 
 describe('gtfs.getStopsByRoute(): ', () => {
-
   before((done) => {
     database.connect(config, done);
   });
 
-  after(function(done) {
+  after((done) => {
     async.series({
       teardownDatabase: (next) => {
         database.teardown(next);

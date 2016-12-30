@@ -11,7 +11,7 @@ const gtfs = require('../../');
 const database = require('../support/database');
 
 // setup fixtures
-var agenciesFixtures = [{
+const agenciesFixtures = [{
   agency_key: 'caltrain',
   path: path.join(__dirname, '../fixture/caltrain_20160406.zip')
 }];
@@ -19,7 +19,6 @@ var agenciesFixtures = [{
 config.agencies = agenciesFixtures;
 
 describe('gtfs.getAllRouteIds(): ', () => {
-
   before((done) => {
     database.connect(config, done);
   });
@@ -48,7 +47,7 @@ describe('gtfs.getAllRouteIds(): ', () => {
 
   it('should return route ids', (done) => {
     gtfs.getAllRouteIds((err, res) => {
-      res = res.map((i) => i.route_id);
+      res = res.map(i => i.route_id);
       let randomIndex = 0;
 
       should.not.exist(err);

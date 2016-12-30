@@ -11,7 +11,7 @@ const gtfs = require('../../');
 const database = require('../support/database');
 
 // setup fixtures
-var agenciesFixtures = [{
+const agenciesFixtures = [{
   agency_key: 'caltrain',
   path: path.join(__dirname, '../fixture/caltrain_20160406.zip')
 }];
@@ -19,7 +19,6 @@ var agenciesFixtures = [{
 config.agencies = agenciesFixtures;
 
 describe('gtfs.getTripsByRouteId(): ', () => {
-
   before((done) => {
     database.connect(config, done);
   });
@@ -48,7 +47,7 @@ describe('gtfs.getTripsByRouteId(): ', () => {
 
   it('should return empty array for invalid route id', (done) => {
     const invalidRouteId = 'not-real';
-    gtfs.getTripsByRouteId(agenciesFixtures[0].agency_key,invalidRouteId,(err, res) => {
+    gtfs.getTripsByRouteId(agenciesFixtures[0].agency_key, invalidRouteId, (err, res) => {
       should.not.exist(err);
       res.should.be.Array();
       res.should.have.length(0);
@@ -57,13 +56,13 @@ describe('gtfs.getTripsByRouteId(): ', () => {
   });
   it('should return trips array for route id specified', (done) => {
     const routeId = 'TaSj-16APR';
-    gtfs.getTripsByRouteId(agenciesFixtures[0].agency_key,routeId,(err, res) => {
+    gtfs.getTripsByRouteId(agenciesFixtures[0].agency_key, routeId, (err, res) => {
       should.not.exist(err);
       res.should.be.Array();
       res.should.not.have.length(0);
 
       randomIndex = Math.floor(Math.random() * res.length);
-      res[randomIndex].should.have.properties({route_id: routeId});
+      res[randomIndex].should.have.properties({ route_id: routeId });
     });
     done();
   });

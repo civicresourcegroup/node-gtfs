@@ -19,7 +19,6 @@ const agenciesFixtures = [{
 config.agencies = agenciesFixtures;
 
 describe('gtfs.getRoutesByDistance(): ', () => {
-
   before((done) => {
     database.connect(config, done);
   });

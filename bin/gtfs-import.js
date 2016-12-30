@@ -19,7 +19,7 @@ const argv = require('yargs')
     })
     .argv;
 
-const configPath = path.join(process.cwd(), argv['configPath']);
+const configPath = path.join(process.cwd(), argv.configPath);
 
 
 function handleError(err) {
@@ -32,8 +32,8 @@ function getConfig() {
   try {
     const config = require(configPath);
 
-    if (argv['skipDelete']) {
-      config.skipDelete = argv['skipDelete'];
+    if (argv.skipDelete) {
+      config.skipDelete = argv.skipDelete;
     }
 
     return config;

@@ -19,7 +19,6 @@ const agenciesFixtures = [{
 config.agencies = agenciesFixtures;
 
 describe('gtfs.getStops(): ', () => {
-
   before((done) => {
     database.connect(config, done);
   });
@@ -51,7 +50,7 @@ describe('gtfs.getStops(): ', () => {
       teardownDatabase: (next) => {
         database.teardown(next);
       }
-    },() => {
+    }, () => {
       const agency_key = 'non_existing_agency';
       gtfs.getStops(agency_key, (err, stops) => {
         should.exist(stops);

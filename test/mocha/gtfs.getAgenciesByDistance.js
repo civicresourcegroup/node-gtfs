@@ -11,7 +11,7 @@ const gtfs = require('../../');
 const database = require('../support/database');
 
 // setup fixtures
-var agenciesFixtures = [{
+const agenciesFixtures = [{
   agency_key: 'caltrain',
   path: path.join(__dirname, '../fixture/caltrain_20160406.zip')
 }];
@@ -19,7 +19,6 @@ var agenciesFixtures = [{
 config.agencies = agenciesFixtures;
 
 describe('gtfs.getAgenciesByDistance(): ', () => {
-
   before((done) => {
     database.connect(config, done);
   });
@@ -51,7 +50,7 @@ describe('gtfs.getAgenciesByDistance(): ', () => {
       teardownDatabase: (next) => {
         database.teardown(next);
       }
-    },function(){
+    }, () => {
       const lon = -121.9867495;
       const lat = 37.38976166855;
       const radius = 100;

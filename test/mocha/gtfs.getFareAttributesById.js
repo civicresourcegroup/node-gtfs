@@ -21,7 +21,6 @@ const agency_key = agenciesFixtures[0].agency_key;
 config.agencies = agenciesFixtures;
 
 describe('gtfs.getFareAttributesById(): ', () => {
-
   before((done) => {
     database.connect(config, done);
   });
