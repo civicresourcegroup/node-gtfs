@@ -18,7 +18,7 @@ const agenciesFixtures = [{
 
 config.agencies = agenciesFixtures;
 
-describe.only('gtfs.getAllShapeIds(): ', () => {
+describe('gtfs.getAllShapeIds(): ', () => {
   before((done) => {
     database.connect(config, done);
   });
