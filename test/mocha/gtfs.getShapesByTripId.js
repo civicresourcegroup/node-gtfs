@@ -19,7 +19,7 @@ const agenciesFixtures = [{
 
 config.agencies = agenciesFixtures;
 
-describe.only('gtfs.getShapesByTripId(): ', () => {
+describe('gtfs.getShapesByTripId(): ', () => {
   before((done) => {
     database.connect(config, done);
   });

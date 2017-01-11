@@ -20,7 +20,7 @@ const agenciesFixtures = [{
 
 config.agencies = agenciesFixtures;
 
-describe.only('gtfs.getTripById(): ', () => {
+describe('gtfs.getTripById(): ', () => {
   before((done) => {
     database.connect(config, done);
   });
