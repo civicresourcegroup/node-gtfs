@@ -47,7 +47,6 @@ describe('gtfs.getAllShapeIds(): ', () => {
 
   it('should return all shape ids', (done) => {
     gtfs.getAllShapeIds(agenciesFixtures[0].agency_key, (err, res) => {
-      res = res.map(i => i.shape_id);
 
       should.not.exist(err);
       should.exist(res);

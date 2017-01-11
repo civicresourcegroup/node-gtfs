@@ -46,7 +46,7 @@ describe('gtfs.getAllRouteIds(): ', () => {
   });
 
   it('should return route ids', (done) => {
-    gtfs.getAllRouteIds((err, res) => {
+    gtfs.getAllRouteIds(agenciesFixtures[0].agency_key, (err, res) => {
       res = res.map(i => i.route_id);
       let randomIndex = 0;
 
